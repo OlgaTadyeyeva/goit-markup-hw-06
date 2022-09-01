@@ -48,6 +48,10 @@ color: var(--main-color)
     outline: 2px solid red;
 }
 
+.header {
+    border-bottom: 1px solid #ECECEC;
+}
+
 .header-container {
     display: flex;
     align-items: center;
@@ -56,11 +60,7 @@ color: var(--main-color)
 
 .header-list, 
 .header-list-contact{
-display: flex;
-}
-
-.header-item {
-    display: block;
+    display: flex;
 }
 
 .header-list-contact {
@@ -100,6 +100,7 @@ margin-right: 93px;
 color: #000000;
 }
 
+
 .header-nav .current {
     color: var(--accent-color);
 } 
@@ -133,6 +134,7 @@ font-size: 14px;
 line-height: 1.14;
 letter-spacing: 0.02em;
 color: var(--second-color);
+display: block;
 padding-top: 32px;
 padding-bottom: 32px;
 transition-property: color;
@@ -435,7 +437,8 @@ justify-content: center;
 gap: 30px;
 }
 
-.clients-item {
+
+.clients-link{
     width: 170px;
     height: 92px;
     border-radius: 4px;
@@ -446,9 +449,8 @@ gap: 30px;
     transition-property: border;
     transition-duration: 250ms;
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-    
-}
 
+}
 .clients-icon {
     fill: #AFB1B8;
     transition-property: fill;
@@ -456,13 +458,13 @@ gap: 30px;
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 } 
 
-.clients-item:hover,
-.clients-item:focus {
+.clients-link:hover,
+.clients-link:focus {
     border:1px solid var(--accent-color);
 }
 
-.clients-item:hover .clients-icon,
-.clients-item:focus .clients-icon{
+.clients-link:hover .clients-icon,
+.clients-link:focus .clients-icon{
     fill: var(--accent-color);
 }
 
@@ -513,7 +515,7 @@ transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .footer-wrap-soc {
-    margin-right: 93px;
+    margin-right: auto;
 }
 
 .footer-text{
@@ -569,6 +571,7 @@ color: var(--white-color)
     filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
     border-radius: 4px;
     background-color: #2F303A;
+    color: var(--white-color);
     padding: 15px;
     transition-property: outline-color;
     transition-duration: 250ms;
@@ -758,7 +761,7 @@ overflow: auto;
 
 .modal {
     width: 528px;
-    min-height: 581px;
+    height: 581px;
     background-color: var(--white-color);
     border-radius: 4px;
     position: absolute;
@@ -806,7 +809,7 @@ overflow: auto;
     text-align: center;
     letter-spacing: 0.03em;
     color: #212121;
-    margin-bottom: 30px;
+    margin-bottom: 12px;
 }
 .input-field {
     margin-bottom: 10px;
@@ -822,6 +825,9 @@ position: relative;
     border: 1px solid rgba(33, 33, 33, 0.2);
     border-radius: 4px;
     padding-left: 42px;
+    transition-property: outline-color;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
    
 }
 
@@ -834,10 +840,18 @@ position: relative;
     left: 12px;
     top: 50%;
     transform: translateY(-50%);
+    transition-property: fill;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+
 }
 
 .form-input:focus + .input-icon{
     fill: var(--accent-color);
+}
+
+.modal-textarea {
+    margin-bottom: 20px;
 }
 
 .modal-button { 
@@ -909,6 +923,7 @@ letter-spacing: 0.03em;
 color: var(--main-color);
 display: flex;
 align-items: center;
+justify-content: center;
 }
 
 .check-text span {
